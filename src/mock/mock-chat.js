@@ -20,7 +20,7 @@ const typingChatMessage = () => {
 const chatBox = (messageId, message, time, fromSelf) => {
   return `<div class="chat-message-container ${fromSelf ? 'from-self float-end' : ''}">
   <span class="message">${message}</span>
-  <span class="text-end time">${time}</span>
+  <span class="text-end time">${time} <span id="message-status-ticks-${messageId}"></span></span>
 </div>`;
 };
 
@@ -42,9 +42,15 @@ module.exports = async function mockChat() {
   let messageId = 1;
 
   for (const chat of chats) {
-    const { delay, time, message, fromSelf } = chat;
-
-    const writingDelayInMilliseconds = message.length * 100;
+    const {
+      readingDelay,
+      time,
+      message,
+      fromSelf = false,
+      pendingMessageDelay = 0,
+      deliveredMessageDelay = 0,
+      readMessageDelay = 0
+    } = chat;
 
     chatContainer.innerHTML += createChatMessageContainer(messageId);
 
@@ -55,6 +61,7 @@ module.exports = async function mockChat() {
     } else {
       messageElem.innerHTML = typingChatMessage();
       chatContainer.scrollTop = chatContainer.scrollHeight;
+      const writingDelayInMilliseconds = message.length * 100;
       await sleep(writingDelayInMilliseconds);
     }
 
@@ -62,8 +69,17 @@ module.exports = async function mockChat() {
 
     chatContainer.scrollTop = chatContainer.scrollHeight;
 
-    messageId++;
+    if (fromSelf) {
+      const messageTickElement = document.getElementById(`message-status-ticks-${messageId}`);
+      await sleep(pendingMessageDelay * 1000);
+      messageTickElement.innerHTML = '<i class="bi bi-check"></i>';
+      await sleep(deliveredMessageDelay * 1000);
+      messageTickElement.innerHTML = '<i class="bi bi-check-all"></i>';
+      await sleep(readMessageDelay * 1000);
+      messageTickElement.innerHTML = '<i class="bi bi-check-all text-primary"></i>';
+    }
 
-    await sleep(delay * 1000);
+    messageId++;
+    await sleep(readingDelay * 1000);
   }
 };
