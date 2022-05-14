@@ -1,2 +1,2 @@
 # chatchat365
-This is a mock chat app.
+This is a desktop chat app.

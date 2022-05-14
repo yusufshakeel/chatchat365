@@ -1,0 +1,98 @@
+[
+  {
+    "from": "Tina",
+    "time": "11:02 pm",
+    "message": "Hiiii!",
+    "delay": 1
+  },
+  {
+    "from": "Toni",
+    "fromSelf": true,
+    "time": "11:02 pm",
+    "message": "hello",
+    "delay": 2
+  },
+  {
+    "from": "Tina",
+    "time": "11:02 pm",
+    "message": "Hiiii!",
+    "delay": 1
+  },
+  {
+    "from": "Toni",
+    "fromSelf": true,
+    "time": "11:02 pm",
+    "message": "hello",
+    "delay": 1
+  },{
+  "from": "Tina",
+  "time": "11:02 pm",
+  "message": "Hiiii!",
+  "delay": 1
+},
+  {
+    "from": "Toni",
+    "fromSelf": true,
+    "time": "11:02 pm",
+    "message": "hello",
+    "delay": 2
+  },
+  {
+    "from": "Tina",
+    "time": "11:02 pm",
+    "message": "Hiiii!",
+    "delay": 1
+  },
+  {
+    "from": "Toni",
+    "fromSelf": true,
+    "time": "11:02 pm",
+    "message": "hello",
+    "delay": 1
+  },
+  {
+    "from": "Toni",
+    "fromSelf": true,
+    "time": "11:02 pm",
+    "message": "hello",
+    "delay": 2
+  },
+  {
+    "from": "Tina",
+    "time": "11:02 pm",
+    "message": "Hiiii!",
+    "delay": 1
+  },
+  {
+    "from": "Toni",
+    "fromSelf": true,
+    "time": "11:02 pm",
+    "message": "hello",
+    "delay": 1
+  },{
+  "from": "Tina",
+  "time": "11:02 pm",
+  "message": "Hiiii!",
+  "delay": 1
+},
+  {
+    "from": "Toni",
+    "fromSelf": true,
+    "time": "11:02 pm",
+    "message": "hello",
+    "delay": 2
+  },
+  {
+    "from": "Tina",
+    "time": "11:02 pm",
+    "message": "Hiiii!",
+    "delay": 1
+  },
+  {
+    "from": "Toni",
+    "fromSelf": true,
+    "time": "11:02 pm",
+    "message": "hello",
+    "delay": 1
+  }
+]
