@@ -120,5 +120,27 @@
     "pendingMessageDelay": 1,
     "deliveredMessageDelay": 1,
     "readMessageDelay": 1
+  },
+  {
+    "from": "Tina",
+    "time": "11:02 pm",
+    "message": "catch up later",
+    "readingDelay": 2
+  },
+  {
+    "from": "Tina",
+    "time": "11:02 pm",
+    "message": "bye",
+    "readingDelay": 2
+  },
+  {
+    "from": "Toni",
+    "fromSelf": true,
+    "time": "11:02 pm",
+    "message": "bye",
+    "readingDelay": 2,
+    "pendingMessageDelay": 1,
+    "deliveredMessageDelay": 1,
+    "readMessageDelay": 1
   }
 ]
