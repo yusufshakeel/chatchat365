@@ -3,96 +3,98 @@
     "from": "Tina",
     "time": "11:02 pm",
     "message": "Hiiii!",
-    "delay": 1
+    "delay": 5
   },
   {
     "from": "Toni",
     "fromSelf": true,
     "time": "11:02 pm",
-    "message": "hello",
+    "message": "hello \uD83D\uDE00",
     "delay": 2
   },
   {
     "from": "Tina",
     "time": "11:02 pm",
-    "message": "Hiiii!",
+    "message": "Today I heard something new and unmemorable. \uD83D\uDC4D",
     "delay": 1
   },
   {
     "from": "Toni",
     "fromSelf": true,
     "time": "11:02 pm",
-    "message": "hello",
+    "message": "This book is sure to liquefy your brain. This book is sure to liquefy your brain. This book is sure to liquefy your brain. This book is sure to liquefy your brain. This book is sure to liquefy your brain.",
     "delay": 1
-  },{
-  "from": "Tina",
-  "time": "11:02 pm",
-  "message": "Hiiii!",
-  "delay": 1
-},
+  },
+  {
+    "from": "Tina",
+    "time": "11:02 pm",
+    "message": "The sky is clear; the stars are twinkling.",
+    "delay": 1
+  },
   {
     "from": "Toni",
     "fromSelf": true,
     "time": "11:02 pm",
-    "message": "hello",
+    "message": "The random sentence generator generated a random sentence about a random sentence.",
     "delay": 2
   },
   {
     "from": "Tina",
     "time": "11:02 pm",
-    "message": "Hiiii!",
+    "message": "Never underestimate the willingness of the greedy to throw you under the bus.",
     "delay": 1
   },
   {
     "from": "Toni",
     "fromSelf": true,
     "time": "11:02 pm",
-    "message": "hello",
+    "message": "I'm confused: when people ask me what's up, and I point, they groan.",
     "delay": 1
   },
   {
     "from": "Toni",
     "fromSelf": true,
     "time": "11:02 pm",
-    "message": "hello",
+    "message": "He had unknowingly taken up sleepwalking as a nighttime hobby.",
     "delay": 2
   },
   {
     "from": "Tina",
     "time": "11:02 pm",
-    "message": "Hiiii!",
+    "message": "On each full moon",
     "delay": 1
   },
   {
     "from": "Toni",
     "fromSelf": true,
     "time": "11:02 pm",
-    "message": "hello",
+    "message": "The sky is clear; the stars are twinkling. The sky is clear; the stars are twinkling. The sky is clear; the stars are twinkling.",
     "delay": 1
-  },{
-  "from": "Tina",
-  "time": "11:02 pm",
-  "message": "Hiiii!",
-  "delay": 1
-},
+  },
+  {
+    "from": "Tina",
+    "time": "11:02 pm",
+    "message": "I love to eat.",
+    "delay": 1
+  },
   {
     "from": "Toni",
     "fromSelf": true,
     "time": "11:02 pm",
-    "message": "hello",
+    "message": "The teenage boy was accused of breaking his arm simply to get out of the test.",
     "delay": 2
   },
   {
     "from": "Tina",
     "time": "11:02 pm",
-    "message": "Hiiii!",
+    "message": "The reservoir water level continued to lower while we enjoyed our long shower.",
     "delay": 1
   },
   {
     "from": "Toni",
     "fromSelf": true,
     "time": "11:02 pm",
-    "message": "hello",
+    "message": "As the rental car rolled to a stop on the dark road, her fear increased by the moment.",
     "delay": 1
   }
 ]
