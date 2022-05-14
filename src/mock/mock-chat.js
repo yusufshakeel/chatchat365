@@ -26,24 +26,11 @@ const chatBox = (messageId, message, time, fromSelf) => {
 
 module.exports = async function mockChat() {
   const chatContainer = document.getElementById('chat-container');
-  const { chats: enrichedChats } = chats.reduce(
-    (result, currentChat) => {
-      const totalDelay = currentChat.delay + result.totalDelay;
-      return {
-        chats: [...result.chats, { ...currentChat, totalDelay }],
-        totalDelay
-      };
-    },
-    {
-      chats: [],
-      totalDelay: 0
-    }
-  );
 
   let messageId = 1;
 
-  for (const chat of enrichedChats) {
-    const { totalDelay, time, message, fromSelf } = chat;
+  for (const chat of chats) {
+    const { delay, time, message, fromSelf } = chat;
 
     chatContainer.innerHTML += createChatMessageContainer(messageId);
 
@@ -55,13 +42,13 @@ module.exports = async function mockChat() {
 
     chatContainer.scrollTop = chatContainer.scrollHeight;
 
-    await sleep(totalDelay * 1000);
+    await sleep(delay * 1000);
     messageElem.innerHTML = chatBox(messageId, message, time, fromSelf);
 
     chatContainer.scrollTop = chatContainer.scrollHeight;
 
     messageId++;
 
-    await sleep(1000);
+    await sleep(delay * 1000);
   }
 };
