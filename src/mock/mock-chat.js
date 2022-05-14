@@ -24,25 +24,40 @@ const chatBox = (messageId, message, time, fromSelf) => {
 </div>`;
 };
 
+const mimicTyping = async ({ fakeChatInputElement, message }) => {
+  fakeChatInputElement.value = '';
+  for (const messageCharacter of message) {
+    await sleep(100);
+    fakeChatInputElement.value += messageCharacter;
+    fakeChatInputElement.scrollTop = fakeChatInputElement.scrollHeight;
+  }
+  await sleep(1000);
+  fakeChatInputElement.value = '';
+};
+
 module.exports = async function mockChat() {
   const chatContainer = document.getElementById('chat-container');
+  const fakeChatInputElement = document.getElementById('fake-chat-input');
 
   let messageId = 1;
 
   for (const chat of chats) {
     const { delay, time, message, fromSelf } = chat;
 
+    const writingDelayInMilliseconds = message.length * 100;
+
     chatContainer.innerHTML += createChatMessageContainer(messageId);
 
     let messageElem = document.getElementById(`message-container-${messageId}`);
 
-    if (!fromSelf) {
+    if (fromSelf) {
+      await mimicTyping({ fakeChatInputElement, message });
+    } else {
       messageElem.innerHTML = typingChatMessage();
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+      await sleep(writingDelayInMilliseconds);
     }
 
-    chatContainer.scrollTop = chatContainer.scrollHeight;
-
-    await sleep(delay * 1000);
     messageElem.innerHTML = chatBox(messageId, message, time, fromSelf);
 
     chatContainer.scrollTop = chatContainer.scrollHeight;
