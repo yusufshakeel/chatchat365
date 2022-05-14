@@ -1,0 +1,61 @@
+{
+  "name": "chatchat365",
+  "version": "0.1.0",
+  "description": "This is a desktop chat app.",
+  "main": "src/main-process/main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec electron .",
+    "prebuild": "rm -rf dist",
+    "precommit": "npm run lint",
+    "build:all-platform": "npm run prebuild && npx electron-builder -mwl",
+    "build:for-mac": "npm run prebuild && npx electron-builder -m",
+    "lint": "npm run lint:src",
+    "lint:src": "npx eslint -c .eslintrc.json src",
+    "lint:test": "npx eslint -c .eslintrc.json test/unit",
+    "lint:fix": "npx eslint --fix -c .eslintrc.json src test/unit",
+    "lint:fix:test": "npx eslint --fix -c .eslintrc.json test/unit",
+    "lint:fix:src": "npx eslint --fix -c .eslintrc.json src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yusufshakeel/chatchat365.git"
+  },
+  "keywords": [
+    "chat",
+    "electron",
+    "javascript",
+    "node"
+  ],
+  "author": "Yusuf Shakeel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yusufshakeel/chatchat365/issues"
+  },
+  "homepage": "https://github.com/yusufshakeel/chatchat365#readme",
+  "build": {
+    "appId": "com.yusufshakeel.chatchat365",
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "icon": "resources/app-icons/stable/chatchat365.icns"
+    },
+    "dmg": {
+      "background": "resources/app-icons/stable/background.tiff",
+      "icon": "resources/app-icons/stable/chatchat365.icns"
+    }
+  },
+  "devDependencies": {
+    "electron": "^18.2.3",
+    "electron-builder": "^23.0.3",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.16",
+    "prettier": "^2.6.2",
+    "spectron": "^19.0.0"
+  },
+  "dependencies": {
+    "electron-window-state": "^5.0.3"
+  }
+}
