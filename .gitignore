@@ -108,3 +108,7 @@ dist
 
 # macOS
 .DS_Store
+
+# output
+output
+build
