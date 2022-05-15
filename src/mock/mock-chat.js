@@ -57,12 +57,13 @@ module.exports = async function mockChat() {
     let messageElem = document.getElementById(`message-container-${messageId}`);
 
     if (fromSelf) {
+      fakeChatInputElement.focus();
       await mimicTyping({ fakeChatInputElement, message });
     } else {
       messageElem.innerHTML = typingChatMessage();
       chatContainer.scrollTop = chatContainer.scrollHeight;
       const writingDelayInMilliseconds = message.length * 100;
-      await sleep(writingDelayInMilliseconds);
+      messageId > 1 && (await sleep(writingDelayInMilliseconds));
     }
 
     messageElem.innerHTML = chatBox(messageId, message, time, fromSelf);
