@@ -1,7 +1,7 @@
 # chatchat365
 This is a mock desktop chat app.
 
-![ChatChat365](./resources/img.png)
+![ChatChat365](./resources/img.png?t=1)
 
 ## Getting started
 
