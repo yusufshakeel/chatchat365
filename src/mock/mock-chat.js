@@ -38,11 +38,14 @@ const mimicTyping = async ({ fakeChatInputElement, message }) => {
 module.exports = async function mockChat() {
   const chatContainer = document.getElementById('chat-container');
   const fakeChatInputElement = document.getElementById('fake-chat-input');
+  const chatUserIsOnlineStatus = document.getElementById('chat-user-is-online-status-container');
 
   let messageId = 1;
 
   for (const chat of chats) {
     const {
+      command,
+      duration = 0,
       readingDelay,
       time,
       message,
@@ -51,6 +54,16 @@ module.exports = async function mockChat() {
       deliveredMessageDelay = 0,
       readMessageDelay = 0
     } = chat;
+
+    if (command) {
+      if (command === 'OFFLINE') {
+        chatUserIsOnlineStatus.innerHTML = `<small><i class="bi bi-circle-fill text-dark"></i> Offline</small>`;
+      } else {
+        chatUserIsOnlineStatus.innerHTML = `<small><i class="bi bi-circle-fill text-success"></i> Online</small>`;
+      }
+      await sleep(duration * 1000);
+      continue;
+    }
 
     chatContainer.innerHTML += createChatMessageContainer(messageId);
 

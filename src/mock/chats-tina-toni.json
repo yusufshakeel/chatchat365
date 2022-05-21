@@ -142,5 +142,10 @@
     "pendingMessageDelay": 1,
     "deliveredMessageDelay": 1,
     "readMessageDelay": 1
+  },
+  {
+    "command": "OFFLINE",
+    "user": "Tina",
+    "duration": 0
   }
 ]
