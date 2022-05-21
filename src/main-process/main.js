@@ -20,8 +20,8 @@ function createWindow() {
     y: windowState.y,
     width: windowState.width,
     height: windowState.height,
-    minWidth: 800,
-    minHeight: 600,
+    minWidth: 600,
+    minHeight: 400,
     ...maxDimension,
     backgroundColor: '#fff',
     webPreferences: {
