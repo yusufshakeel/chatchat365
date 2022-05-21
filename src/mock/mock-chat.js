@@ -11,16 +11,16 @@ const createChatMessageContainer = messageId => {
 };
 
 const typingChatMessage = () => {
-  return `<div class="chat-message-container">
+  return `<div class="chat-message-container float-start">
   <span class="spinner-border text-primary spinner-border-sm" role="status"></span>
   <span>Typing...</span>
 </div>`;
 };
 
 const chatBox = (messageId, message, time, fromSelf) => {
-  return `<div class="chat-message-container ${fromSelf ? 'from-self float-end' : ''}">
+  return `<div class="chat-message-container ${fromSelf ? 'from-self float-end' : 'float-start'}">
   <span class="message">${message}</span>
-  <span class="text-end time">${time} <span id="message-status-ticks-${messageId}"></span></span>
+  <p class="align-right time m-0">${time} <span id="message-status-ticks-${messageId}"></span></p>
 </div>`;
 };
 
